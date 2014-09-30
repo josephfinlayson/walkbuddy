@@ -1,0 +1,1 @@
+Walks = new Mongo.Collection('Walks')

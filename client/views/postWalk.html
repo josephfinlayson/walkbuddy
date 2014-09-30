@@ -1,0 +1,23 @@
+<template name="postWalk">
+    <div class="row">
+        {{> googleMap}}
+        <div class="col-md-4">
+            <form role="form">
+                <div class="form-group">
+                    <label for="location">Where do you want to start the walk (click the map!)</label>
+                    <input class="form-control" id="location" value="{{location}}">
+                </div>
+                <div class="form-group">
+                    <label for="talkAbout">What do you want to talk about</label>
+                    <input class="form-control" id="talkAbout" placeholder="stuff, other things">
+                </div>
+                <div class="form-group">
+                    <label for="when">When?</label>
+                    <input class="form-control" id="when">
+                    <p class="help-block">i.e - next Tuesday at 3pm</p>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</template>

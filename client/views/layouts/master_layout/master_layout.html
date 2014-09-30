@@ -1,0 +1,28 @@
+<template name="MasterLayout">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Walk</title>
+    </head>
+
+    <body>
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+
+                <div class="cover-container">
+
+                    {{> nav}}
+                    <div style="padding-top:100px">
+                        {{> yield}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</template>

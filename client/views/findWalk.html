@@ -1,0 +1,24 @@
+<template name="findWalk">
+<h2>Click a marker to find a walking buddy</h2>
+    <div class="row">
+        {{> googleMap}}
+        <div class="col-md-4">
+            <form role="form">
+                <div class="form-group">
+                    <label for="walker">Walker:</label>
+                    <input class="form-control" id="location" value="@{{walker}}">
+                </div>
+                <div class="form-group">
+                    <label for="talkAbout">They want to talk about</label>
+                    <input class="form-control" id="talkAbout" value="{{talkAbout}}">
+                </div>
+                <div class="form-group">
+                    <label for="when">When?</label>
+                    <input class="form-control" id="when" value="{{when}}">
+                </div>
+                <p class="help-block">Contact them on Twitter!</p>
+            </form>
+        </div>
+    </div>
+
+</template>
