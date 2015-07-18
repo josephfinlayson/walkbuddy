@@ -2,6 +2,8 @@
 var marker;
 var latLong = getLocation();
 
+
+
 Template.postWalk.rendered = function() {
     // console.log(Geolocation)
     GoogleMaps.init({
@@ -22,6 +24,11 @@ Template.postWalk.rendered = function() {
             });
         }
     );
+
+    Deps.autorun(function() {
+        getLocation()
+        map.setCenter(new google.maps.LatLng(latLong.lat, latLong.lng));
+    })
 
 }
 

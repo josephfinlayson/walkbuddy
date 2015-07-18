@@ -22,7 +22,7 @@ Router.map(function() {
     });
     this.route('postWalk', {
         path: '/postWalk',
-        onBeforeAction: function() {
+        onBeforeAction: function(pause) {
             if (!Meteor.user()) {
                 this.render('home');
                 pause()
@@ -36,27 +36,3 @@ Router.map(function() {
     });
 
 });
-// Router.map(function() {
-//     this.route('/postWalk')
-//     this.route('/findWalk')
-// });
-
-
-// Router.onBeforeAction(function() {
-//     if (!Meteor.user()) {
-//         // if the user is not logged in, render the Login template
-//         console.log("not logged in")
-//         console.log(this)
-//         Router.current().render('home')
-//         this.render('home')
-//         // this.render('findWalk')
-//         // this.render('adads')
-//     } else {
-//         // otherwise don't hold up the rest of hooks or our route/action function
-//         // from running
-//         console.log("asd")
-//         // this.next();
-//     }
-// }, {
-//     // only: ['postWalk']
-// })

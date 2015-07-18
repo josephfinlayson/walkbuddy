@@ -27,8 +27,7 @@ Template.findWalk.rendered = function() {
 }
 
 var organiseData = function(dbData) {
-    dbData.forEach(function(data) {
-    })
+    dbData.forEach(function(data) {})
     return dbData;
 }
 var getMarkersFromDB = function() {
@@ -58,20 +57,12 @@ var putMarkersonPage = function(orgData, map) {
 }
 
 var populateFields = function(stuff) {
-    Session.set('walker', stuff.twitterHandle)
-    Session.set('when', stuff.when)
-    Session.set('talkAbout', stuff.talkAbout)
+    Session.set('wd', stuff)
 }
 
 
 Template.findWalk.helpers({
-    walker: function() {
-        return Session.get('walker')
-    },
-    talkAbout: function() {
-        return Session.get('talkAbout')
-    },
-    when: function() {
-        return Session.get('when')
+    wd: function() {
+        return Session.get('wd')
     }
-});
+})
